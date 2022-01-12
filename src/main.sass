@@ -1,0 +1,84 @@
+body
+  background-image: url('img/backfonimage.jpeg')
+  background-attachment: fixed // прокрута , не даёт сьехать фону
+  background-size: cover // фон занимает всё ширину экрана
+
+@keyframes spring
+  15%
+    -webkit-transform-origin: center center
+    -webkit-transform: scale(1.2, 1.1)
+
+  40%
+    -webkit-transform-origin: center center
+    -webkit-transform: scale(0.95, 0.95)
+
+  75%
+    -webkit-transform-origin: center center
+    -webkit-transform: scale(1.05, 1)
+
+  100%
+    -webkit-transform-origin: center center
+    -webkit-transform: scale(1, 1)
+
+*
+  box-sizing: border-box // Свойства width и height включают в себя значения полей и границ, но не отступов (margin)
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.container
+  margin: 0 auto
+  padding-top: 60px
+  padding-bottom: 80px
+
+.row
+  display: flex
+  flex-direction: column
+  align-items: center
+  align-content: center
+  padding: 0 15px
+  margin: 0 60px
+
+.tab
+  display: flex
+  background: #3a34344f
+  border-radius: 5px
+  height: 37px
+  margin-bottom: 15px
+
+  ul
+    display: flex
+    margin: auto
+    justify-content: space-between
+    align-items: center
+    text-align: center
+
+    li
+      &:active
+        transform: translateX(4px) translateY(4px)
+
+      &:hover
+        animation: spring 300ms ease-out
+        text-shadow: 0 -1px 0 #ef816c
+
+      a
+        padding: 16px 20px
+        font-family: 'Russo One'
+        cursor: pointer
+        color: #ebebeb
+        text-decoration: none
+        white-space: nowrap
+
+        @media (max-width: 750px)
+          padding: 1.15rem 10px
+          font-size: 12px
+
+        @media (max-width: 500px)
+          padding: 1.15rem 10px
+          font-size: 8px
+
+        &:hover
+          background-image: url('https://scottyzen.sirv.com/Images/v/button.png')
+          background-size: 100% 100%
+          color: #27262c
+          font-weight: bold

@@ -1,0 +1,97 @@
+*{
+	box-sizing: border-box; /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*::-webkit-scrollbar {
+  width: 0;
+}*/
+
+body{
+  background-image: url('img/backfonimage.jpeg');
+  background-attachment:fixed; /*прокрута , не даёт сьехать фону*/
+  background-size: cover; /*фон занимает всё ширину экрана*/
+}
+
+.container{
+	margin: 0 auto;
+	padding-top: 60px;
+	padding-bottom: 80px;
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	padding: 0 15px;
+	margin: 0 60px;
+	/*background: #48389b;#3a34344f*/
+}
+
+.tab{
+	display: flex;
+    background: #3a34344f;
+	border-radius: 5px;
+    height: 37px;
+	margin-bottom: 15px;
+}
+
+.tab ul{
+	display: flex;
+	margin: auto;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.tab ul li a{
+	margin: 1rem 1.15rem;
+	font-family: 'Russo One';
+	cursor: pointer;
+	color: #ebebeb;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.tab ul li:hover{
+	animation: spring 300ms ease-out;
+	text-shadow: 0 -1px 0 #ef816c;
+}
+
+.tab ul li a:hover{
+	background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  	background-size: 100% 100%;
+  	color: #27262c;
+	font-weight: bold;
+}
+
+.tab ul li:active {
+	transform: translateX(4px) translateY(4px);
+  }
+
+  @keyframes spring {
+	15% {
+	  -webkit-transform-origin: center center;
+	  -webkit-transform: scale(1.2, 1.1);
+	}
+	40% {
+	  -webkit-transform-origin: center center;
+	  -webkit-transform: scale(0.95, 0.95);
+	}
+	75% {
+	  -webkit-transform-origin: center center;
+	  -webkit-transform: scale(1.05, 1);
+	}
+	100% {
+	  -webkit-transform-origin: center center;
+	  -webkit-transform: scale(1, 1);
+	}
+  }
+
+  /*.main{
+	width: 870px;
+	height: auto;
+	margin-top: 15px;
+}*/
